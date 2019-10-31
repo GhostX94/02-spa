@@ -68,8 +68,28 @@ private heroes: Heroe[] = [
     getHeroe(idx: string) {
       return this.heroes[idx];
     }
+
+    buscarHeroes(termino: string) {
+      const heroesArr: Heroe[] = [];
+      termino = termino.toLocaleLowerCase();
+
+      for (let i = 0; i < this.heroes.length; i++) {
+
+        const heroe = this.heroes[i];
+        const nombre = heroe.nombre.toLowerCase();
+        if (nombre.indexOf( termino ) >= 0 ) {
+
+              heroe.idx = i;
+              heroesArr.push( heroe );
+            }
+      }
+
+      return heroesArr;
+
+     }
 }
 export interface Heroe {
+    idx?: number;
     nombre: string;
     bio: string;
     img: string;

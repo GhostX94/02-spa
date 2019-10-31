@@ -1,0 +1,8 @@
+{
+    "tslint.enable": false,
+    "css.lint.propertyIgnoredDueToDisplay": "ignore",
+    "scss.lint.vendorPrefix": "ignore",
+    "less.lint.vendorPrefix": "ignore",
+    "tslint.ignoreDefinitionFiles": false,
+    "tslint.alwaysShowStatus": false
+}
